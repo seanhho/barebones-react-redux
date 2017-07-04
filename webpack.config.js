@@ -11,7 +11,19 @@ var config = {
     output: {
         path: path.join(__dirname, "client/lib"),
         filename: "[name].bundle.js"
-    }
+    },
+    module: {
+      loaders: [
+        {
+          test: /.jsx?$/,
+          loader: 'babel-loader',
+          exclude: /node_modules/,
+          query: {
+            presets: ['es2015', 'react']
+          }
+        }
+      ]
+    },
 };
 
 module.exports = config;
