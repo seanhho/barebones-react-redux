@@ -6,10 +6,15 @@ export default class App extends React.Component {
     super(props);
   }
 
+  clicky() {
+    console.log('what')
+  }
+
   render() {
   return (
     <div>
       <div>A todo list</div>
+      <button onClick={this.clicky}>button</button>
     </div>
   )
  } 
